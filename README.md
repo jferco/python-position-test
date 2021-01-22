@@ -15,4 +15,4 @@ There are two ways to run this project. Make sure you have python 3 installed on
 
 If you just want to execute a function that recieves the 2 arrays you have to open the file called `randomTeamAssign.py` and then uncomment one of the two last lines. Then save it.
 
-`cd` into the repository and then execute the command ` python3 mairandomTeamAssignn.py`. To show the result in the console without menu
+`cd` into the repository and then execute the command ` python3 randomTeamAssign.py`. To show the result in the console without menu
