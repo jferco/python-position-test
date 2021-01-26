@@ -18,17 +18,14 @@ def fill_teams(teams, people):
 
 
     teamMatrix = build_teams_matrix(teams)
-
-    while (people != []):
-
-        randomPerson = get_random_choice(people)
-
-        randomTeam= get_random_choice(teamMatrix)
-
-        randomTeam[1].append(randomPerson)
-        # this is a reference call, so the people variable wil be emptied after the loop
-        people.remove(randomPerson)
-        
+    random.shuffle(people)
+    teams_last_index = len(teamMatrix) -1
+    teams_index = 0
+    for person in people:
+        teamMatrix[teams_index][1].append(person)
+        teams_index += 1
+        if teams_index > teams_last_index:
+            teams_index = 0
     return teamMatrix
 
 # Checks if there's enough people to fill at least 2 per team
@@ -108,7 +105,7 @@ def no_menu_run(teams, people):
 
 # If you want to test only the functions without the menu, uncomment the next lines and execute just this file.
 
-#no_menu_run(['t1','t2','t3'],['p1','p2','p3','p4','p5','p6','p7'])
+no_menu_run(['t1','t2','t3'],['p1','p2','p3','p4','p5','p6','p7'])
 #no_menu_run(['t1','tx','ty'],['p1','p2','p3','p4','p5','p6','p7','p8','p9', 'p10'])
 
 
