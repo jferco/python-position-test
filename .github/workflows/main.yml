@@ -31,4 +31,4 @@ jobs:
       - name: Testing prints
         run: |
           echo Commit message:  ${{ github.event.head_commit.message }} 
-          echo pr number:  ${{ github.event.number }}
+         # echo pr number:  ${{ github.event.number }}
